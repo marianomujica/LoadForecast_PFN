@@ -1,0 +1,36 @@
+# Archivo principal de configuracion editable.
+# Formato: nombre: valor
+# Las rutas relativas se resuelven desde la raiz de JIT_2026.
+# No es necesario modificar ningun archivo Python.
+
+data_energy_path: "../Modelo/Data_Ibarlucea"
+data_smn_path: "../Modelo/SMN"
+output_path: "./outputs"
+
+data_start_date: "2024-07-16"
+data_end_date: "2026-04-18"
+holdout_date: "2026-04-19"
+forbidden_after_date: "2026-04-19"
+station: "ROSARIO AERO"
+frequency: "15min"
+
+train_ratio: 0.80
+test_ratio: 0.20
+
+# Experimento individual de referencia para scripts y pruebas.
+# Los valores validos son 1, 2, 3 y 4.
+experiment_id: 1
+
+# Limita las filas mas recientes usadas por cada experimento.
+# Recomendado para esta computadora: 8000.
+# Usar null para conservar todas las filas.
+max_historical_rows: 16000
+
+# Parametros TabPFN-3 CPU.
+device: "cpu"
+random_state: 42
+n_estimators: 1
+ignore_pretraining_limits: true
+fit_mode: "fit_preprocessors"
+n_preprocessing_jobs: 1
+prediction_batch_size: 128

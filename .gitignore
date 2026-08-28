@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+outputs/
+logs/
+*.joblib
+*.tabpfn_fit
+*.ckpt
+API_KEY.txt
